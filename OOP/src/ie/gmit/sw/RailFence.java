@@ -1,5 +1,10 @@
 package ie.gmit.sw;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
 /* Basic implementation of the Rail Fence Cypher using a 2D char array 
  * Note that there are more efficient ways to encrypt and decrypt, but the following implementation illustrates the steps
  * involved in each process and shows how the zig-zagging works. Feel free to change / adapt. 
@@ -124,7 +129,28 @@ public class RailFence {
 	}
 		
 	public static void main(String[] args) throws Exception{
-		String s = new RailFence().decrypt("TTFOHATGRNREEANOETYRCIMHHAKT", 5);
-		System.out.println(">" + s);
+		
+		File file = new File("message.txt");
+		
+		//in = new FileReader("message.txt");
+		
+		System.out.println("Enter File Name: ");
+		
+		try {
+			Scanner scanner = new Scanner(file);
+			
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				
+				String s = new RailFence(). decrypt(line, 5);
+				System.out.println(s);
+			}
+			scanner.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		//String s = new RailFence().decrypt("TTFOHATGRNREEANOETYRCIMHHAKT", 5);
+		//System.out.println(">" + s);
 	}
 }
