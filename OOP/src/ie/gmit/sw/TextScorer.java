@@ -1,12 +1,13 @@
 package ie.gmit.sw;
 
+import java.io.FileNotFoundException;
 import java.util.Map;
 
-public class TextScorer {
-	private Map<String, Double> map = null;
+public class TextScorer extends QuadGramMap{
+	private Map<String, Integer> map = null;
 	
-	public TextScorer(Map<String, Double> m){
-		this.map = m;
+	public TextScorer(Map<String, Double> m) throws FileNotFoundException{
+		this.map = super.parsequadGramMap();
 	}
 	
 	public double getScore(String text){
