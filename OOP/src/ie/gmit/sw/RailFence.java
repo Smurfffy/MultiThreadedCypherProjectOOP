@@ -130,19 +130,19 @@ public class RailFence {
 		
 	public static void main(String[] args) throws Exception{
 		
-		File file = new File("message.txt");
+		File cypherfile = new File("message.txt"); // creates the file object
 		
 		//in = new FileReader("message.txt");
 		
-		System.out.println("Enter File Name: ");
+		//System.out.println("Enter File Name: ");
 		
-		try {
-			Scanner scanner = new Scanner(file);
+		try { // scanner takes in input from the file
+			Scanner scanner = new Scanner(cypherfile);
 			
 			while (scanner.hasNextLine()) {
-				String line = scanner.nextLine();
+				String cypherText = scanner.nextLine();
 				
-				String s = new RailFence(). decrypt(line, 5);
+				String s = new RailFence(). decrypt(cypherText, 5);
 				System.out.println(s);
 			}
 			scanner.close();

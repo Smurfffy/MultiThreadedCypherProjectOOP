@@ -2,7 +2,7 @@ package ie.gmit.sw;
 
 import java.util.concurrent.BlockingQueue;
 
-public class Decryptor implements Runnable{
+public class Decryptor implements Runnable{ // implements the runnable interface
 	
 	private BlockingQueue<Resultable> queue;
 	private String cypherText;

@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class QuadGramMap {
 	public static final int GRAM_SIZE = 4; // size
 	
-	public Map<String, Integer> parsequadGramMap() throws FileNotFoundException{
+	public Map<String, Integer> parsequadGramMap() throws FileNotFoundException{ // creates the quadGramMap
 		
 		Map<String, Integer> quadGramMap = new ConcurrentHashMap<String, Integer>();
 		

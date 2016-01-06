@@ -14,7 +14,7 @@ public class CypherBreaker {
 		init();
 	}
 	
-	public void init(){
+	public void init(){ // initialises the queue 
 		// Start a load of producers
 		
 		for (int i = 2; i < cypherText.length()/2; i++){
