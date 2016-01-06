@@ -13,7 +13,7 @@ public class QuadGramMap {
 		
 		Map<String, Integer> quadGramMap = new ConcurrentHashMap<String, Integer>();
 		
-		BufferedReader reader = new BufferedReader(new FileReader("4grams.txt"));
+		BufferedReader reader = new BufferedReader(new FileReader("4grams.txt")); // reads in the 4Grams file for the cypher.
 		
 		return null;
 		
